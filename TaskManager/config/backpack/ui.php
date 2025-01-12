@@ -63,7 +63,16 @@ return [
     'home_link' => '',
 
     // Menu logo. You can replace this with an <img> tag if you have a logo.
-    'project_logo' => '<img src="' . asset('images/nav-logo.png') . '"  style="height: 40px; transform: scale(2); margin: 10px">',
+    'project_logo' => '
+        <div style="text-align: center;">
+            <b style="font-size: 25px;">Work</b><b style="font-size: 20px;">plan</b>
+            <br>
+            <img src="/images/nav-logo.png" style="height: 40px; transform: scale(2); margin-top: 5px;">
+        </div>
+    ',
+
+
+
 
     // Show / hide breadcrumbs on admin panel pages.
     'breadcrumbs' => true,
@@ -77,7 +86,7 @@ return [
     // ---------
 
     // Show "Getting Started with Backpack" info block?
-    'show_getting_started' => false,
+    'show_getting_started' => true,
 
     // -------------
     // GLOBAL STYLES

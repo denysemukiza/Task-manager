@@ -7,9 +7,6 @@ use Illuminate\Support\Facades\Route;
 // --------------------------
 // This route file is loaded automatically by Backpack\CRUD.
 // Routes you generate using Backpack\Generators will be placed here.
-Route::get(config('backpack.base.route_prefix', 'admin'), function () {
-    return view('vendor.backpack.ui.custom-home');
-})->name('backpack.dashboard');
 Route::group([
     'prefix' => config('backpack.base.route_prefix', 'admin'),
     'middleware' => array_merge(

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Client;
 use App\Http\Requests\ClientRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
@@ -74,4 +75,15 @@ class ClientCrudController extends CrudController
     {
         $this->setupCreateOperation();
     }
+    public function store(ClientRequest $request)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:clients',
+            'school_login_details' => 'required|string',
+            'phone' => 'nullable|string|max:15', // Allow phone to be nullable
+        ]);
+        Client::create($request->all());
+    }
+
 }

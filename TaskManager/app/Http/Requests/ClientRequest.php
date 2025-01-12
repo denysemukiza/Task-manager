@@ -25,8 +25,12 @@ class ClientRequest extends FormRequest
     public function rules()
     {
         return [
-            // 'name' => 'required|min:5|max:255'
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:clients,email',
+            'school_login_details' => 'required|string',
+            'phone_number' => 'nullable|string|max:15',
         ];
+
     }
 
     /**
