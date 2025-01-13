@@ -1,5 +1,5 @@
 build
-node_modules/
+/node_modules/
 dist/
 *.log
 /.phpunit.cache
@@ -9,7 +9,7 @@ dist/
 /public/storage
 /storage/*.key
 /storage/pail
-/vendor
+/vendor/
 .env
 .env.backup
 .env.production
